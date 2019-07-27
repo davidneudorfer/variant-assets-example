@@ -1,0 +1,8 @@
+ARG NODE_VERSION
+
+FROM node:${NODE_VERSION}
+
+# https://www.npmjs.com/package/semver
+RUN npm install semver
+
+ENTRYPOINT ["/usr/local/lib/node_modules/npm/node_modules/semver/bin/semver", "$@"]

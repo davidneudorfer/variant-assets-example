@@ -1,0 +1,9 @@
+#!/usr/bin/env variant
+
+tasks:
+  hello:
+    script: |
+      echo Hello $(whoami)!
+  whoami:
+    script: |
+      assets/whoami.sh
